@@ -2,7 +2,6 @@ let close1 = document.querySelector(".close1");
 let close2 = document.querySelector(".close2");
 let close3 = document.querySelector(".close3");
 
-
 let h1 = document.querySelector(".h1");
 let h2 = document.querySelector(".h2");
 let h3 = document.querySelector(".h3");
@@ -13,9 +12,7 @@ let gamer2score = document.querySelector(".gamer2score");
 
 let gamer1choice = document.querySelector(".gamer1choice");
 let gamer2choice = document.querySelector(".gamer2choice");
-
 let againbutton = document.querySelector(".againbutton");
-
 let win = document.querySelector(".win")
 
 let array1 = ["Rock", "Scissors", "Paper"];
@@ -52,10 +49,7 @@ function access1 () {
        h3.innerHTML = array5[0]
     }
     }
-
 }
-
-
 
 close1.addEventListener("click", open1);
 
@@ -68,13 +62,11 @@ function open1() {
 
     if(close1.style.visibility == "hidden") {
     
-
         if(close2.style.visibility == "hidden" || close3.style.visibility == "hidden" ) {
             gamer2choice.innerHTML = h1.innerHTML
         } else {
             gamer1choice.innerHTML = h1.innerHTML
         }
-
 
         if(gamer1choice.innerHTML == "Rock" && gamer2choice.innerHTML == "Paper") {
             win.innerHTML = "Gamer 2 WİNS!"
@@ -98,7 +90,6 @@ function open1() {
     }
 }
 
-
 close2.addEventListener("click", open2);
 
 function open2() {
@@ -118,7 +109,6 @@ function open2() {
             gamer1choice.innerHTML = h2.innerHTML
         }
 
-        
         if(gamer1choice.innerHTML == "Rock" && gamer2choice.innerHTML == "Paper") {
             win.innerHTML = "Gamer 2 WİNS!"
             gamer2score.innerHTML ++
@@ -160,7 +150,6 @@ function open3 () {
             gamer1choice.innerHTML = h3.innerHTML
         }
 
-
         if(gamer1choice.innerHTML == "Rock" && gamer2choice.innerHTML == "Paper") {
             win.innerHTML = "Gamer 2 WİNS!"
             gamer2score.innerHTML ++
@@ -184,10 +173,7 @@ function open3 () {
     }
 }
 
-
 againbutton.addEventListener("click", again1)
-
-
 
 function again1() {
     h1.innerHTML = array1[Math.floor(Math.random()*3)];
